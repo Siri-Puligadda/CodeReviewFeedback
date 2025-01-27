@@ -1,50 +1,15 @@
 # React + TypeScript + Vite
+- npm i
+- npm run dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
+create a React application called "Code Review Feedback" that tracks and manages feedback on various aspects of code quality. The component should have upvote and downvote functionality for each aspect, and it must meet all specified requirements.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Requirements
+1. The CodeReviewFeedback component displays five aspects: Readability, Performance, Security, Documentation, and Testing.
+2. Each aspect has two buttons labeled "Upvote" and "Downvote" to allow users to vote.
+3. The initial count for upvotes and downvotes for each aspect is set to zero.
+4. Clicking the "Upvote" button should increment the upvote count for that aspect by 1.
+5. Clicking the "Downvote" button should increment the downvote count for that aspect by 1.
+6. Ensure the counts update in the UI immediately upon clicking.
+7. The component should have a subtle animation when the voting count is updated to enhance the user experience.
